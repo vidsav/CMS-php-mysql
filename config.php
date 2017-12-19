@@ -12,5 +12,7 @@ $db = mysqli_connect("localhost", "root", "root", "cms_blog")
 
 define('BASE_URL', 'localhost/');
 
+define('ADMIN_URL', BASE_URL . 'admin/');
+
 
 ?>
