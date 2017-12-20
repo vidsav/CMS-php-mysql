@@ -21,8 +21,9 @@
                                     echo "No";
                                 }
                             echo "</td>";
-                            echo "<td>{$row['id']}</td>";
-                            echo "<td>{$row['id']}</td>";
+                            echo "<td>
+                            <a class='btn btn-primary' href='index.php?action=editPage&ID={$row['id']}'><i class='fa fa-pencil'></i> Edit</a></td>";
+                            echo "<td><a class='btn btn-danger' href='index.php?action=deletePage&ID={$row['id']}'><i class='fa fa-remove'></i> Delete</a></td>";
                         echo "</tr>";
                        
                     }
