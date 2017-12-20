@@ -5,6 +5,8 @@
             <?php 
             if (isset($_GET['action']) && $_GET['action'] == 'addPage'){
                 include('addPage.php');
+            }else if(isset($_GET['action']) && $_GET['action'] == 'insertPage'){
+                echo="Success!"
             }else{
                 include('listPage.php');
             }
