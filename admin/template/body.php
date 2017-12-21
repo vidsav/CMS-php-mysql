@@ -6,24 +6,29 @@
              if (isset($_GET['action']) && $_GET['action'] != ''){
                  switch($_GET['action']){
                  case 'addPage':
-                 include('addPage.php');
+                    include('addPage.php');
                  break;
                  case 'insertPage':
-                                   $title = $_POST['title'];
-                $content = $_POST['content'];
-                $isActive = ($_POST['is_active'] == 1 ? 1 : 'NULL');
-                
-                $sql = "INSERT INTO page (title, content, is_active) 
-                        VALUES ('{$title}', '{$content}', {$isActive})";
-                
-                $db->query($sql);
-                
-                echo "<div class='alert alert-success' role='alert'>
-  Page successfully added!
-</div>";
+                    $title = $_POST['title'];
+                    $content = $_POST['content'];
+                    $isActive = ($_POST['is_active'] == 1 ? 1 : 'NULL');
+
+                    $sql = "INSERT INTO page (title, content, is_active) 
+                            VALUES ('{$title}', '{$content}', {$isActive})";
+
+                    $db->query($sql);
+
+                    echo "<div class='alert alert-success' role='alert'>
+      Page successfully added!
+    </div>";
                  break;
                  case 'deletePage':
-                 
+                    $id = $_GET['ID'];
+                    
+                    $sql = "DELETE FROM page WHERE id= {$id}";
+                    $db->query($sql);
+                    
+                    header('Location: '. ADMIN_URL);
                  break;
                  }
              }else{

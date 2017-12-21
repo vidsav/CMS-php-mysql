@@ -1,3 +1,4 @@
+<h3>Pages list</h3>
 <table class="table">
     <tr>
         <th>ID</th>
