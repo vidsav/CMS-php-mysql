@@ -1,12 +1,12 @@
-            <table class="table">
-                <tr>
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Active?</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
-                </tr>
-                <?php
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Active?</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <?php
                     $query = "SELECT * FROM page";
                     $result = mysqli_query($db, $query);
                     
@@ -29,4 +29,4 @@
                     }
                     
                 ?>
-            </table>
+</table>
