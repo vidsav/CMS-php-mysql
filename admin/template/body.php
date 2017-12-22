@@ -22,9 +22,16 @@
       Page successfully added!
     </div>";
                  break;
+                 case 'editPage':
+                    $sql = "SELECT * FROM page WHERE id = {$_GET['ID']}";
+                    $result = mysqli_query($db, $sql);
+                    $page = mysqli_fetch_assoc($result);
+                    include('editPage.php');
+                 break;
+                 case 'updatePage':
+                 break;
                  case 'deletePage':
                     $id = $_GET['ID'];
-                    
                     $sql = "DELETE FROM page WHERE id= {$id}";
                     $db->query($sql);
                     

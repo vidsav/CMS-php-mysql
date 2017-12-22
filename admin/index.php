@@ -4,22 +4,22 @@ require('../config.php');
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-  <head>
+    <head>
 
-    <?php include('template/header.php'); ?>
+        <?php include('template/header.php'); ?>
 
-  </head>
+    </head>
 
-  <body>
-    <?php include('template/head.php'); ?>
+    <body>
+        <?php include('template/head.php'); ?>
 
-    <?php include('template/body.php'); ?>
+        <?php include('template/body.php'); ?>
 
-    <?php include('template/footer.php'); ?>
+        <?php include('template/footer.php'); ?>
 
-  </body>
+    </body>
 
-</html>
+    </html>
