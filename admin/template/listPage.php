@@ -23,8 +23,8 @@
                                 }
                             echo "</td>";
                             echo "<td>
-                            <a class='btn btn-primary' href='index.php?action=editPage&ID={$row['id']}'><i class='fa fa-pencil'></i> Edit</a></td>";
-                            echo "<td><a class='btn btn-danger' href='index.php?action=deletePage&ID={$row['id']}'><i class='fa fa-remove'></i> Delete</a></td>";
+                            <a href='?action=editPage&ID={$row['id']}' data-toggle='popover' data-trigger='hover' data-content='Edit'><i class='fa fa-pencil'></i></a></td>";
+                            echo "<td><a href='?action=deletePage&ID={$row['id']}' onClick='return confirm(\"Are you sure you want to delete this page?\")'><i class='fa fa-remove'></i></a></td>";
                         echo "</tr>";
                        
                     }

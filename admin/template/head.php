@@ -27,7 +27,7 @@
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
               <h1>Administration</h1>
-              <span class="subheading">A Blog</span>
+              <span class="subheading"></span>
             </div>
           </div>
         </div>

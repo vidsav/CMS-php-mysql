@@ -29,6 +29,13 @@
                     include('editPage.php');
                  break;
                  case 'updatePage':
+                    $title = $_POST['title'];
+                    $content = $_POST['content'];
+                    $isActive = ($_POST['is_active'] == 1 ? 1 : 'NULL');
+                         
+                    $sql = "UPDATE page SET title = '{$title}', content = '{$content}', is_active = {$isActive} WHERE id = {$_GET['ID']}";
+                    $db->query($sql);
+                    header('Location: '. ADMIN_URL);
                  break;
                  case 'deletePage':
                     $id = $_GET['ID'];
