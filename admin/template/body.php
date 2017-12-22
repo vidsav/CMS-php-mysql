@@ -13,8 +13,8 @@
                     $content = $_POST['content'];
                     $isActive = ($_POST['is_active'] == 1 ? 1 : 'NULL');
 
-                    $sql = "INSERT INTO page (title, content, is_active) 
-                            VALUES ('{$title}', '{$content}', {$isActive})";
+                    $sql = "INSERT INTO page (title, content, is_active, created_date, updated_date) 
+                            VALUES ('{$title}', '{$content}', {$isActive}, NOW(), NOW())";
 
                     $db->query($sql);
 
@@ -33,7 +33,7 @@
                     $content = $_POST['content'];
                     $isActive = ($_POST['is_active'] == 1 ? 1 : 'NULL');
                          
-                    $sql = "UPDATE page SET title = '{$title}', content = '{$content}', is_active = {$isActive} WHERE id = {$_GET['ID']}";
+                    $sql = "UPDATE page SET title = '{$title}', content = '{$content}', is_active = {$isActive}, updated_date = NOW() WHERE id = {$_GET['ID']}";
                     $db->query($sql);
                     header('Location: '. ADMIN_URL);
                  break;
