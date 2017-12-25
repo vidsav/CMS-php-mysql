@@ -26,7 +26,7 @@
                                 }
                             echo "</td>";
                         echo "<td><small>" . ($row['created_date'] ? dateFormat($row['created_date']) : 'TBA') . "</small></td>";
-                        echo "<td><small>" . ($row['updated_date'] ? dateFormat($row['updated_date']) : 'TBA') . "</small></td>";
+                        echo "<td><small>" . ($row['updated_date'] ? dateFormat($row['updated_date']) : 'No date') . "</small></td>";
                         
                             echo "<td>
                             <a href='?action=editPage&ID={$row['id']}' data-toggle='popover' data-trigger='hover' data-content='Edit'><i class='fa fa-pencil'></i></a></td>";
