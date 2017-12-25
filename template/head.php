@@ -11,14 +11,15 @@
                 <?php
                 $query = "SELECT * FROM page WHERE is_active IS NOT NULL";
                 $result = mysqli_query($db, $query);
-                $pages = mysqli_fetch_all($result, MYSQLI_ASSOC);
               
-                foreach($pages as $page){
-                    echo "<li>";
-                        echo "<a class='nav-link' href='?page={$page['id']}'>{$page['title']}</a>";
+                 while($row = mysqli_fetch_array($result)){
+                                           echo "<li>";
+                        echo "<a class='nav-link' href='?page={$row['id']}'>{$row['title']}</a>";
                     echo "<li>"; 
-                }
-              ?>
+                       
+                    }
+                    
+                ?>
 
             </ul>
         </div>
