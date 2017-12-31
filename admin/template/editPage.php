@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-12 mx-auto">
             <h3>Edit "<?php echo $page['title']; ?>" page</h3><hr>
-            <form method="post" action="?action=updatePage&ID=<?php echo $page['id']; ?>">
+            <form method="post" action="?action=updatePage&ID=<?php echo $page['id']; ?>" enctype="multipart/form-data">
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                         <label>Title</label>
@@ -28,6 +28,17 @@
                             <option value="1" <?php $page['is_active'] ? print('selected') : '' ?>>Yes</option>
                             <option value="0" <?php !page['is_active'] ? print('selected') : '' ?>>No</option>
                         </select>
+
+                    </div>
+                </div>
+                <br>
+                <div class="control-group">
+                    <div class="form-group col-xs-3 controls">
+                        <label>Image</label>
+
+                    </div>
+                    <div class="form-group col-xs-9 controls">
+<input type="file" name="image">
 
                     </div>
                 </div>

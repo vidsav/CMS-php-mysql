@@ -32,6 +32,14 @@
                     $title = $_POST['title'];
                     $content = $_POST['content'];
                     $isActive = ($_POST['is_active'] == 1 ? 1 : 'NULL');
+                         if (isset($_FILES['image'])) {
+                            $fileName = $_FILES['image']['name'];;
+                            $fileName = str_replace(' ', '', $fileName);
+                            $fileTmp = $_FILES['image']['tmp_name'];
+                            move_uploaded_file($fileTmp, "/uploads/" . $fileName);
+                        } else {
+                            $fileName = 'NULL';
+                        }
                          
                     $sql = "UPDATE page SET title = '{$title}', content = '{$content}', is_active = {$isActive}, updated_date = NOW() WHERE id = {$_GET['ID']}";
                     $db->query($sql);
