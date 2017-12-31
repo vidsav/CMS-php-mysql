@@ -14,12 +14,14 @@
               
                  while($row = mysqli_fetch_array($result)){
                                            echo "<li>";
-                        echo "<a class='nav-link' href='?page={$row['id']}'>{$row['title']}</a>";
+                        echo "<a style='color:#fff;' class='nav-link' href='?page={$row['id']}'>{$row['title']}</a>";
                     echo "<li>"; 
                        
                     }
                     
                 ?>
+
+              <a style='color:#fff;' class="nav-link" href="blog.php">Blog</a>
 
             </ul>
         </div>

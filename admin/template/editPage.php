@@ -50,7 +50,7 @@
 
                     </div>
                     <div class="form-group col-xs-9 controls">
-<img src="<?= BASE_URL ?>uploads<?= $page['image'] ?>" height="200">
+<img src="<?= BASE_URL ?>uploads/<?= $page['image'] ?>" height="200">
 
                     </div>
                 </div>
