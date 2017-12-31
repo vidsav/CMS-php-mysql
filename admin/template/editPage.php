@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="col-md-12 mx-auto">
             <h3>Edit "<?php echo $page['title']; ?>" page</h3><hr>
             <form method="post" action="?action=updatePage&ID=<?php echo $page['id']; ?>">
                 <div class="control-group">
@@ -13,7 +13,7 @@
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                         <label>Content</label>
-                        <textarea name="content" rows="5" class="form-control" placeholder="Content" id="message" required><?php echo $page['content']; ?></textarea>
+                        <textarea name="content" rows="5" class="form-control" placeholder="Content" id="summernote" required><?php echo $page['content']; ?></textarea>
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
