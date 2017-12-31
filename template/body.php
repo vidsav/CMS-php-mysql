@@ -7,11 +7,17 @@ $result = mysqli_query($db, $query);
 
 $page = mysqli_fetch_assoc($result);
 
+if($page['image']){
+    $coverPhoto = BASE_URL . 'uploads/' . $page['image'];
+}else{
+    $coverPhoto = 'img/home-bg.jpg';
+}
+
 ?>
 
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <header class="masthead" style="background-image: url('<?= $coverPhoto ?>')">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">

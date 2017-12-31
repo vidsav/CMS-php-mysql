@@ -43,6 +43,19 @@
                     </div>
                 </div>
                 <br>
+                <?php if($page['image']): ?>
+                  <div class="control-group">
+                    <div class="form-group col-xs-3 controls">
+                        <label>Current image</label>
+
+                    </div>
+                    <div class="form-group col-xs-9 controls">
+<img src="<?= BASE_URL ?>uploads<?= $page['image'] ?>" height="200">
+
+                    </div>
+                </div>
+                <br>
+                <?php endif ?>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary" id="sendMessageButton">Edit page</button>
                 </div>
