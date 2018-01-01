@@ -29,8 +29,8 @@
                  $title = $_POST['title'];
                  $content = $_POST['content'];
 
-                 $sql = "INSERT INTO post (title, content) 
-                            VALUES ('{$title}', '{$content}')";
+                 $sql = "INSERT INTO post (title, content, created_date) 
+                            VALUES ('{$title}', '{$content}', NOW())";
 
                  $db->query($sql);
 
