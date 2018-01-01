@@ -5,80 +5,44 @@ require('config.php');
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-  <head>
+    <head>
 
-    <?php include('template/header.php'); ?>
+        <?php include('template/header.php'); ?>
 
-  </head>
+    </head>
 
-  <body>
-    <?php include('template/head.php'); ?>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-            <h1>Blog</h1><hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Man must explore, and this is exploration at its greatest
-              </h2>
-              <h3 class="post-subtitle">
-                Problems look mighty small from 150 miles up
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on September 24, 2017</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-              </h2>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on September 18, 2017</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Science has not yet mastered prophecy
-              </h2>
-              <h3 class="post-subtitle">
-                We predict too much for the next year and yet far too little for the next ten.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on August 24, 2017</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post.html">
-              <h2 class="post-title">
-                Failure is not an option
-              </h2>
-              <h3 class="post-subtitle">
-                Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-              </h3>
-            </a>
-            <p class="post-meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on July 8, 2017</p>
-          </div>
-          <hr>
-          <!-- Pager -->
-        </div>
-      </div>
-    </div>
-    <?php include('template/footer.php'); ?>
+    <body>
+        <?php include('template/head.php'); ?>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                        <h1>Blog</h1>
+                        <hr>
+                        <?php
+                $query = "SELECT * FROM post";
+                $result = mysqli_query($db, $query);
+              
+                 while($row = mysqli_fetch_array($result)){
+                     
+                      echo "<div class='post-preview'>";
+             echo "<h2 class='post-title'>
+                {$row['title']}</h2>";
+              echo "<h6 class='post-subtitle'>
+                {$row['content']}</h6>";
+         echo "</div><hr>";
+                       
+                    }
+                    
+                ?>
+                            <!-- Pager -->
+                    </div>
+                </div>
+            </div>
+            <?php include('template/footer.php'); ?>
 
-  </body>
+    </body>
 
-</html>
+    </html>
