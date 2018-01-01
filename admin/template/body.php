@@ -22,6 +22,22 @@
       Page successfully added!
     </div>";
                  break;
+                 case 'addPost':
+                 include('addPost.php');
+                 break;
+                 case 'insertPost':
+                 $title = $_POST['title'];
+                 $content = $_POST['content'];
+
+                 $sql = "INSERT INTO post (title, content) 
+                            VALUES ('{$title}', '{$content}')";
+
+                 $db->query($sql);
+
+                 echo "<div class='alert alert-success' role='alert'>
+      Post successfully added!
+    </div>";
+                break;
                  case 'editPage':
                     $sql = "SELECT * FROM page WHERE id = {$_GET['ID']}";
                     $result = mysqli_query($db, $sql);

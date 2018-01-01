@@ -13,7 +13,7 @@
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                         <label>Content</label>
-                        <textarea name="content" rows="5" class="form-control" placeholder="Content" id="summernote" required></textarea>
+                        <textarea name="content" rows="5" class="form-control" placeholder="Content" required></textarea>
                     </div>
                 </div>
                 <br>
