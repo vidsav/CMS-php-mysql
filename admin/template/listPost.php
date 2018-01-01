@@ -1,4 +1,4 @@
-<h3>Blog post list</h3>
+<h3>Post list</h3>
 <table class="table">
     <tr>
         <th>ID</th>
@@ -19,7 +19,7 @@
                         echo "<td><small>" . ($rowPost['created_date'] ? dateFormat($rowPost['created_date']) : 'TBA') . "</small></td>";
                             echo "<td>
                             <a href='?action=editPage&ID={$rowPost['id']}' data-toggle='popover' data-trigger='hover' data-content='Edit'><i class='fa fa-pencil'></i></a></td>";
-                            echo "<td><a href='?action=deletePage&ID={$rowPost['id']}' onClick='return confirm(\"Are you sure you want to delete this page?\")'><i class='fa fa-remove'></i></a></td>";
+                            echo "<td><a href='?action=deletePost&ID={$rowPost['id']}' onClick='return confirm(\"Are you sure you want to delete this post?\")'><i class='fa fa-remove'></i></a></td>";
                         echo "</tr>";
                        
                     }

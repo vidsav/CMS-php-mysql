@@ -68,6 +68,13 @@
                     
                     header('Location: '. ADMIN_URL);
                  break;
+                 case 'deletePost':
+                    $id = $_GET['ID'];
+                    $sql = "DELETE FROM post WHERE id= {$id}";
+                    $db->query($sql);
+                    
+                    header('Location: '. ADMIN_URL);
+                 break;
                  }
              }else{
                  include('listPage.php');

@@ -32,7 +32,7 @@ require('config.php');
                 {$row['title']}</h2>";
               echo "<h6 class='post-subtitle'>
                 {$row['content']}</h6>";
-                echo "<p class='post-meta'>Created {$row['created_date']}</p>";
+                echo "<p class='post-meta'><small>Created: {$row['created_date']}</small></p>";
          echo "</div><hr>";
 
                     }
