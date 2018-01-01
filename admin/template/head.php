@@ -12,7 +12,10 @@
               <a class="nav-link" href="<?php echo(ADMIN_URL); ?>index.php?action=addPage">Create new page</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo(BASE_URL); ?>" target="_blank">Open page</a>
+              <a class="nav-link" href="<?php echo(ADMIN_URL); ?>index.php?action=addPost">Create new page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo(BASE_URL); ?>" target="_blank">Back to Front home</a>
             </li>
           </ul>
         </div>

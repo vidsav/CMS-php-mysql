@@ -13,16 +13,17 @@
                 $result = mysqli_query($db, $query);
               
                  while($row = mysqli_fetch_array($result)){
-                                           echo "<li>";
+                     
+                                           echo "<li class='nav-item'>";
                         echo "<a style='color:#fff;' class='nav-link' href='?page={$row['id']}'>{$row['title']}</a>";
                     echo "<li>"; 
                        
                     }
                     
                 ?>
-
-              <a style='color:#fff;' class="nav-link" href="blog.php">Blog</a>
-
+<li class="nav-item">
+              <a class="nav-link" href="blog.php">Blog</a>
+                </li>
             </ul>
         </div>
     </div>

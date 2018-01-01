@@ -19,6 +19,7 @@ require('config.php');
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
+            <h1>Blog</h1><hr>
           <div class="post-preview">
             <a href="post.html">
               <h2 class="post-title">
@@ -73,9 +74,6 @@ require('config.php');
           </div>
           <hr>
           <!-- Pager -->
-          <div class="clearfix">
-            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-          </div>
         </div>
       </div>
     </div>

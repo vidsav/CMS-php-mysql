@@ -55,6 +55,7 @@
                  }
              }else{
                  include('listPage.php');
+                 include('listPost.php');
              }
             ?>
         </div>
