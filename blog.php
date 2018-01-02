@@ -16,11 +16,21 @@ require('config.php');
 
     <body>
         <?php include('template/head.php'); ?>
+        <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="site-heading">
+                        <h1>Blog</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-md-10 mx-auto">
-                        <h1>Blog</h1>
-                        <hr>
                         <?php
                 $query = "SELECT * FROM post";
                 $result = mysqli_query($db, $query);
@@ -30,8 +40,8 @@ require('config.php');
                       echo "<div class='post-preview'>";
              echo "<h2 class='post-title'>
                 {$row['title']}</h2>";
-              echo "<h6 class='post-subtitle'>
-                {$row['content']}</h6>";
+              echo "<h5 style='font-weight:300;' class='post-subtitle'>
+                {$row['content']}</h5>";
                 echo "<p class='post-meta'><small>Created: {$row['created_date']}</small></p>";
          echo "</div><hr>";
 

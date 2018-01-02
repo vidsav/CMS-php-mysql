@@ -18,7 +18,7 @@
                             echo "<td>{$rowPost['title']}</td>";  
                         echo "<td><small>" . ($rowPost['created_date'] ? dateFormat($rowPost['created_date']) : 'TBA') . "</small></td>";
                             echo "<td>
-                            <a href='?action=editPage&ID={$rowPost['id']}' data-toggle='popover' data-trigger='hover' data-content='Edit'><i class='fa fa-pencil'></i></a></td>";
+                            <a href='?action=editPost&ID={$rowPost['id']}' data-toggle='popover' data-trigger='hover' data-content='Edit'><i class='fa fa-pencil'></i></a></td>";
                             echo "<td><a href='?action=deletePost&ID={$rowPost['id']}' onClick='return confirm(\"Are you sure you want to delete this post?\")'><i class='fa fa-remove'></i></a></td>";
                         echo "</tr>";
                        

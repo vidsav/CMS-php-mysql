@@ -37,7 +37,21 @@
                  echo "<div class='alert alert-success' role='alert'>
       Post successfully added!
     </div>";
-                break;
+                 break;
+                 case 'editPost':
+                    $sql = "SELECT * FROM post WHERE id = {$_GET['ID']}";
+                    $result = mysqli_query($db, $sql);
+                    $post = mysqli_fetch_assoc($result);
+                    include('editPost.php');
+                 break;
+                 case 'updatePost':
+                    $title = $_POST['title'];
+                    $content = $_POST['content'];
+                         
+                    $sql = "UPDATE post SET title = '{$title}', content = '{$content}' WHERE id = {$_GET['ID']}";
+                    $db->query($sql);
+                    header('Location: '. ADMIN_URL);
+                 break;
                  case 'editPage':
                     $sql = "SELECT * FROM page WHERE id = {$_GET['ID']}";
                     $result = mysqli_query($db, $sql);
