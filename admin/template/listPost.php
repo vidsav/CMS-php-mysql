@@ -1,7 +1,7 @@
 <h3>Post list</h3>
 <table class="table">
     <tr>
-        <th>ID</th>
+        <th>ID#</th>
         <th>Title</th>
         <th>Created</th>
         <th>Edit</th>

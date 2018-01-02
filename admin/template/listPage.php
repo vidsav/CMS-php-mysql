@@ -1,7 +1,7 @@
 <h3>Pages list</h3>
 <table class="table">
     <tr>
-        <th>ID</th>
+        <th>ID#</th>
         <th>Title</th>
         <th>Active?</th>
         <th>Created</th>
